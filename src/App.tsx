@@ -1,6 +1,6 @@
 import { TamaguiProvider } from 'tamagui'
 import config from './tamagui.config'
-import Home from './pages/Home'
+import Home from '@pages/Home'
 
 export default function App() {
   return (
