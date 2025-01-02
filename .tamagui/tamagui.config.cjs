@@ -44046,7 +44046,27 @@ var Text4 = (0, import_core56.styled)(import_core56.Text, {
 var import_core57 = require("@tamagui/core");
 
 // src/tamagui.config.ts
-var appConfig = createTamagui(config);
+var headingFont2 = (0, import_core57.createFont)({
+  size: config.fonts.heading.size,
+  lineHeight: config.fonts.heading.lineHeight,
+  weight: config.fonts.heading.weight,
+  letterSpacing: config.fonts.heading.letterSpacing,
+  family: "Quicksand, Helvetica, Arial, sans-serif"
+});
+var bodyFont2 = (0, import_core57.createFont)({
+  size: config.fonts.body.size,
+  lineHeight: config.fonts.body.lineHeight,
+  weight: config.fonts.body.weight,
+  letterSpacing: config.fonts.body.letterSpacing,
+  family: "Inter, Helvetica, Arial, sans-serif"
+});
+var appConfig = createTamagui({
+  ...config,
+  fonts: {
+    heading: headingFont2,
+    body: bodyFont2
+  }
+});
 var tamagui_config_default = appConfig;
 /*! Bundled license information:
 

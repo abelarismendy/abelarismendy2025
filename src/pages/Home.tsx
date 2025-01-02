@@ -1,7 +1,8 @@
 import { LinearGradient } from 'tamagui/linear-gradient'
 import { angleToPoints } from '@utils/gradient'
-import logo from '@assets/isologo.webp'
-import { Stack, useMedia } from 'tamagui'
+// import logo from '@assets/isologo.webp'
+import { Stack, XStack, useMedia, Text } from 'tamagui'
+import me from '@assets/me.webp'
 
 function CustomLinearGradient() {
   const media = useMedia()
@@ -32,10 +33,16 @@ function CustomLinearGradient() {
         {...gradientConfig}
         start={start}
         end={end}
+        alignItems="center"
       >
-        <Stack zIndex={10} padding="$4" alignItems="flex-start">
-          <img src={logo} alt="Abel Arismendy" height="64px" />
-        </Stack>
+        <XStack zIndex={10} padding="$4" justifyContent="center" alignItems="center" width="100%" height="100%" maxWidth="1080px">
+          <Stack>
+            <Text fontFamily="$heading" color="#fff" fontSize="$7" fontWeight="normal">Hello, I'm</Text>
+            <Text fontFamily="$heading" color="#fff" fontSize="$10" fontWeight="bold">Abel Arismendy</Text>
+            <Text fontFamily="$heading" color="#fff" fontSize="$7" fontWeight="normal">Software engineer focusing on frontend web development.</Text>
+          </Stack>
+          <img src={me} alt="Abel Arismendy" width="50%" style={{ alignSelf: 'flex-start' }}/>
+        </XStack>
       </LinearGradient>
   )
 }
